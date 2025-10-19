@@ -4,7 +4,7 @@ import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import CustomerList from "./pages/CustomerList.jsx";
 import CustomerDetails from "./pages/CustomerDetails";
-import Home from "./pages/home.jsx";
+import Home from "./pages/Home.jsx";
 
 
 function App() {
