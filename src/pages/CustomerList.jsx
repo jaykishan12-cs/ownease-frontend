@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+//accessing the api
+const url = process.env.REACT_APP_API_URL;
+
+
 const CustomerList = () => {
   const navigate = useNavigate();
 
@@ -14,7 +18,7 @@ const CustomerList = () => {
     const fetchCustomers = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:8080/customers", {
+        const res = await fetch(`${url}/customers`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

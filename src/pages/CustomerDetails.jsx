@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+//accessing the api
+const url = process.env.REACT_APP_API_URL;
+
+
 const formatDate = (dateStr) => {
   const d = new Date(dateStr);
   return d.toLocaleString("default", { month: "short", year: "numeric" });
@@ -18,7 +22,7 @@ const CustomerDetails = () => {
       setLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch(`http://localhost:8080/${id}`, {
+        const res = await fetch(`${url}/${id}`, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

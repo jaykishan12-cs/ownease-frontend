@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+//accessing the api
+const url = process.env.REACT_APP_API_URL;
+
 const SearchCustomer = () => {
   const [query, setQuery] = useState("");
   const [customer, setCustomer] = useState(null); // Can be array or single object
@@ -14,7 +17,7 @@ const SearchCustomer = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:8080/search?query=${encodeURIComponent(query)}`, {
+      const res = await fetch(`${url}/search?query=${encodeURIComponent(query)}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

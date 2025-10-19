@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const url = process.env.REACT_APP_API_URL;
 
 
 const AddCustomer = () => {
@@ -45,7 +46,7 @@ const AddCustomer = () => {
   };
 
   try {
-    const res = await fetch("http://localhost:8080/new", {
+    const res = await fetch(`${url}/new`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
