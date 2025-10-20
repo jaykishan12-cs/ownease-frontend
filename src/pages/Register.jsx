@@ -28,7 +28,7 @@ const Register = () => {
     setError("");
 
     try {
-      const response = await fetch(`${url}/auth/register`, {
+      const response = await fetch("https://ownease.onrender.com/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
