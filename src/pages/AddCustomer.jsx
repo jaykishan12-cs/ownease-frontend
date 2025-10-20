@@ -46,7 +46,7 @@ const AddCustomer = () => {
   };
 
   try {
-    const res = await fetch(`${url}/new`, {
+    const res = await fetch("https://ownease.onrender.com/new", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
