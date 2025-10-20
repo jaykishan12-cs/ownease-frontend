@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 
 //accessing the api
-const url = process.env.REACT_APP_API_URL;
+const url = process.env.VITE_API_URL;
 
 const Register = () => {
   const navigate = useNavigate();
