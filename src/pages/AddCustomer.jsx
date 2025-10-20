@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const url = process.env.REACT_APP_API_URL;
+const url = process.env.VITE_API_URL;
 
 
 const AddCustomer = () => {
