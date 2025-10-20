@@ -84,7 +84,7 @@ return (
           if (window.confirm("Are you sure you want to delete this customer?")) {
             try {
               const token = localStorage.getItem("token");
-              const res = await fetch(`http://localhost:8080/${customer._id}`, {
+              const res = await fetch("https://ownease.onrender.com/${customer._id}", {
                 method: "DELETE",
                 headers: {
                   Authorization: `Bearer ${token}`,
