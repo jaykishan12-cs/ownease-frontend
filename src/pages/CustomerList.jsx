@@ -18,7 +18,7 @@ const CustomerList = () => {
     const fetchCustomers = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${url}/customers`, {
+        const res = await fetch("https://ownease.onrender.com/customers", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
