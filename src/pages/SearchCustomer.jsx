@@ -17,7 +17,7 @@ const SearchCustomer = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`${url}/search?query=${encodeURIComponent(query)}`, {
+      const res = await fetch("https://ownease.onrender.com/?query=${encodeURIComponent(query)}", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
